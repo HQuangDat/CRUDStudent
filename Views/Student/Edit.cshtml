@@ -5,24 +5,28 @@
 }
 @model CRUDStudent.Models.Entity.Student;
 
-<h1>Add Student</h1>
+<h1>Edit Student</h1>
 
 <form method="post">
     <div class="form-container mt-3">
         <div>
+            <label>Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly/>
+        </div>
+        <div>
             <label>Student name</label>
-            <input type="text" class="form-control" asp-for="Name"/>
+            <input type="text" class="form-control" asp-for="Name" />
         </div>
         <div>
             <label>Major</label>
-            <input type="text" class="form-control" asp-for="Major"/>
+            <input type="text" class="form-control" asp-for="Major" />
         </div>
         <div>
             <label>Date of birth</label>
-            <input type="date" class="form-control" asp-for="dob"/>
+            <input type="date" class="form-control" asp-for="dob" />
         </div>
         <div class="save_button">
-            <input type="submit" class="form-control" value="Save"/>
+            <input type="submit" class="form-control" value="Edit" />
         </div>
     </div>
 </form>
