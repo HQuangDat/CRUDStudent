@@ -3,24 +3,26 @@
 *@
 @{
 }
+@model CRUDStudent.Models.Entity.Student;
 
 <h1>Add Student</h1>
 
-
-<div class="form-container mt-3">
-    <div>
-        <label>Your name</label>
-        <input type="text" class="form-control" />
+<form method="post">
+    <div class="form-container mt-3">
+        <div>
+            <label>Your name</label>
+            <input type="text" class="form-control" asp-for="Name"/>
+        </div>
+        <div>
+            <label>Major</label>
+            <input type="text" class="form-control" asp-for="Major"/>
+        </div>
+        <div>
+            <label>Date of birth</label>
+            <input type="date" class="form-control" asp-for="dob"/>
+        </div>
+        <div class="save_button">
+            <input type="submit" class="form-control" value="Save"/>
+        </div>
     </div>
-    <div>
-        <label>Major</label>
-        <input type="text" class="form-control" />
-    </div>
-    <div>
-        <label>Date of birth</label>
-        <input type="date" class="form-control" />
-    </div>
-    <div class="save_button">
-        <input type="button" class="form-control" value="Save" />
-    </div>
-</div>
+</form>
